@@ -1,21 +1,27 @@
-let speed = 10;
+let speed = 20;
 let scale = 0.17; // Image scale (I work on 1080p monitor)
 let canvas;
 let ctx;
-let logoColor;
 
-let dvd = {
+var good = 'assets/GTBT_emologo_good.png'
+var bad = 'assets/GTBT_emologo_bad.png'
+
+var times = [good, bad]
+
+let face = {
     x: 200,
     y: 300,
-    xspeed: 1,
-    yspeed: 1,
+    xspeed: 3,
+    yspeed: 3,
+    width: 400,
+    height: 400,
     img: new Image()
 };
 
 (function main(){
+    pickFace();
     canvas = document.getElementById("splash-canvas");
     ctx = canvas.getContext("2d");
-    dvd.img.src = 'assets/GTBT_emologo_bad.png';
 
     //Draw the "tv screen"
     canvas.width  = window.innerWidth;
@@ -27,15 +33,15 @@ let dvd = {
 function update() {
     setTimeout(() => {
         //Draw the canvas background
-        ctx.fillStyle = 'red';
+        ctx.fillStyle ='red';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-        //Draw DVD Logo and his background
-        ctx.fillStyle = "red";
-        ctx.fillRect(dvd.x, dvd.y, dvd.img.width*scale, dvd.img.height*scale);
-        ctx.drawImage(dvd.img, dvd.x, dvd.y, dvd.img.width*scale, dvd.img.height*scale);
+        //Draw face Logo and his background
+        ctx.fillStyle = 'red';
+        ctx.fillRect(face.x, face.y, face.width*scale, face.height*scale);
+        ctx.drawImage(face.img, face.x, face.y, face.width*scale, face.height*scale);
         //Move the logo
-        dvd.x+=dvd.xspeed;
-        dvd.y+=dvd.yspeed;
+        face.x+=face.xspeed;
+        face.y+=face.yspeed;
         //Check for collision
         checkHitBox();
         update();
@@ -44,11 +50,18 @@ function update() {
 
 //Check for border collision
 function checkHitBox(){
-    if(dvd.x+dvd.img.width*scale >= canvas.width || dvd.x <= 0){
-        dvd.xspeed *= -1;
+    if(face.x+face.width*scale >= canvas.width || face.x <= 0){
+        face.xspeed *= -1;
+        pickFace();
     }
 
-    if(dvd.y+dvd.img.height*scale >= canvas.height || dvd.y <= 0){
-        dvd.yspeed *= -1;
+    if(face.y+face.height*scale >= canvas.height || face.y <= 0){
+        face.yspeed *= -1;
+        pickFace();
     }
+}
+
+function pickFace(){
+  x = Math.floor(Math.random() * Math.floor(2))
+  face.img.src = times[x]
 }
