@@ -11,10 +11,10 @@ var times = [good, bad]
 let face = {
     x: 200,
     y: 300,
-    xspeed: 3,
-    yspeed: 3,
-    width: 400,
-    height: 400,
+    xspeed: 2,
+    yspeed: 2,
+    width:1000,
+    height: 1000,
     img: new Image()
 };
 
@@ -24,11 +24,20 @@ let face = {
     ctx = canvas.getContext("2d");
 
     //Draw the "tv screen"
-    canvas.width  = window.innerWidth;
-    canvas.height = window.innerHeight;
 
     update();
 })();
+
+function resizeCanvas () {
+  canvas.width = window.innerWidth
+  canvas.height = window.innerHeight
+}
+
+// Listeners
+window.addEventListener('resize', resizeCanvas)
+
+// Init
+resizeCanvas()
 
 function update() {
     setTimeout(() => {
