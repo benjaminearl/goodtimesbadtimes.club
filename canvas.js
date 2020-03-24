@@ -28,16 +28,18 @@ let face = {
     update();
 })();
 
+
+
 function resizeCanvas () {
   canvas.width = window.innerWidth
   canvas.height = window.innerHeight
 }
 
-// Listeners
 window.addEventListener('resize', resizeCanvas)
 
-// Init
 resizeCanvas()
+
+
 
 function update() {
     setTimeout(() => {
