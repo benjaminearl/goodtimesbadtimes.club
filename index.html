@@ -14,10 +14,15 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>
-    <audio controls>
-      <source src="https://radio.goodtimesbadtimes.club/radio/8000/radio.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-  </audio>
+    <div id="player">
+      <audio controls>
+        <source src="https://radio.goodtimesbadtimes.club/radio/8000/radio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div id="chat">
+      <iframe name="embed_readwrite" src="https://etherpad.wikimedia.org/p/Radio_Almonde_Chatroom?showControls=true&showChat=true&showLineNumbers=true&useMonospaceFont=false" width=600 height=400></iframe>
+    </div>
     <div class="splash-container">
       <canvas id="splash-canvas"></canvas>
     </div>

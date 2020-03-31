@@ -7,8 +7,21 @@ body {
   margin: 0;
 }
 
+#player {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+#chat {
+  position:absolute;
+  height: 400px;
+  width: 200px;
+  bottom: 20px;
+  left: 20px;
+}
+
 .splash-container {
-  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 200;
