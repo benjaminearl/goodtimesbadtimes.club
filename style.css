@@ -13,14 +13,6 @@ body {
   left: 20px;
 }
 
-#chat {
-  position:absolute;
-  width: 500px;
-  height: 600px;
-  bottom: 20px;
-  left: 20px;
-}
-
 .splash-container {
   align-items: center;
   justify-content: center;
