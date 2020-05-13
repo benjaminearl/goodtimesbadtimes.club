@@ -23,7 +23,7 @@ let face = {
     canvas = document.getElementById("splash-canvas");
     ctx = canvas.getContext("2d");
 
-    //Draw the "tv screen"
+    //Draw the "screen"
 
     update();
 })();

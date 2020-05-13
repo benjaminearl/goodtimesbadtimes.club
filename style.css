@@ -5,30 +5,142 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: 'Times New Roman', serif;
+  font-size: 20px;
+  color: #fff;
 }
 
+p {
+  margin: 0;
+}
+
+a {
+  font-style: italic;
+  cursor: alias;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h4 {
+  margin: 0;
+}
+
+.journal iframe {
+  width: 31vw;
+}
+
+figure {
+  margin: 0px;
+}
+
+#container {
+  display: inline-block;
+  position: relative;
+}
+
+#container {
+  position: relative;
+  z-index: 0;
+  color: #fff;
+  height: 100vh;
+}
+
+header {
+  border-bottom: 1px solid #fff;
+  mix-blend-mode: screen;
+}
+
+.header-element {
+  width: 33vw;
+  height: 8vh;
+  display: inline-block;
+  margin-left: 0px;
+  padding: 0px;
+  border-right: 1px solid #fff;
+}
+
+.header-element p {
+  padding-left: 15px;
+  padding-top: 4%;
+}
+
+.content {
+  padding: 15px;
+  mix-blend-mode: screen;
+}
+
+.section {
+  display: inline-block;
+  width: 33vw;
+  height: 92vh;
+  vertical-align: top;
+  position: relative;
+  border-right: 1px solid #fff;
+  overflow: scroll;
+}
+
+.links {
+  margin-top: 30px;
+}
+
+.journal {
+  border: none;
+}
+
+.block {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px dashed #fff;
+}
+
+.block-image img {
+  width: 32vw;
+}
+
+.block-link {
+  color: white;
+  text-decoration: none;
+  font-style: normal;
+}
+
+.link-info {
+  text-decoration: underline;
+}
+
+
 #player {
-  position: fixed;
-  top: 20px;
-  left: 20px;
+  margin-top: 15px;
 }
 
 #chat {
-  position:absolute;
-  height: 500px;
-  width: 400px;
-  width: 500px;
-  height: 600px;
+  position: absolute;
   bottom: 20px;
   left: 20px;
 }
 
-.splash-container {
+#splash-container {
   align-items: center;
   justify-content: center;
-  z-index: 200;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+}
+
+.mobile-header {
+  display: none;
 }
 
 @media all and (max-width: 850px) {
   #chat { display: none;}
+  .header-element {display: none;}
+  .section {width: 100vw; height: auto}
+  body {background-color: red}
+  .block-image img {width: 90vw;}
+  .journal iframe {width: 90vw;}
+  .mobile-header {display:block;}
+  .content {border-bottom: 1px solid white; margin-bottom: 20px;}
 }

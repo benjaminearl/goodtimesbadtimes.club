@@ -12,22 +12,153 @@
     <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="theme-color" content="#ffffff">
+    <script src="http://code.angularjs.org/1.1.5/angular.min.js"></script>
+    <script src="http://code.angularjs.org/1.1.5/angular-resource.min.js"></script>
+    <script src="http://code.angularjs.org/1.1.5/angular-sanitize.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+  crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="player">
-      <audio controls>
-        <source src="https://radio.goodtimesbadtimes.club/radio/8000/radio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-    </div>
+    <div id="container">
+      <header>
+        <div class="header-element">
+          <p>
+            Radio
+          </p>
+        </div>
+        <div class="header-element">
+          <p>
+            Good Times Bad Times
+          </p>
+        </div>
+        <div class="header-element journal">
+          <p>
+            Journal
+          </p>
+        </div>
+      </header>
 
-    <div id="chat">
-    <script id="cid0020000246744137829" data-cfasync="false" async src="https://st.chatango.com/js/gz/emb.js" style="width: 400px;height: 500px;">{"handle":"gtbtclub","arch":"js","styles":{"a":"CC0000","b":100,"c":"FFFFFF","d":"FFFFFF","k":"CC0000","l":"CC0000","m":"CC0000","n":"FFFFFF","p":"10","q":"CC0000","r":100,"fwtickm":1}}</script>
-  </div>
+        <!-- RADIO SECTION -->
+        <div id="radio-section" class="section">
+          <div class="content">
+            <p class="mobile-header">
+              RADIO
+            </p>
+          <!-- Audio Player -->
+          <div id="player">
+            <audio controls>
+              <source src="https://radio.goodtimesbadtimes.club/radio/8000/radio.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <!-- Chat box -->
+          <div id="chat">
+            <script id="cid0020000246744137829" data-cfasync="false" async src="https://st.chatango.com/js/gz/emb.js" style="width: 300px;height: 400px;">{"handle":"gtbtclub","arch":"js","styles":{"a":"CC0000","b":100,"c":"FFFFFF","d":"FFFFFF","k":"CC0000","l":"CC0000","m":"CC0000","n":"FFFFFF","p":"10","q":"CC0000","r":100,"fwtickm":1}}</script>
+          </div>
+        </div>
+        </div>
 
-    <div class="splash-container">
-      <canvas id="splash-canvas"></canvas>
+        <!-- INFO SECTION -->
+        <div id="info-section" class="section">
+          <div class="content">
+            <p class="mobile-header">
+              GOOD TIMES BAD TIMES
+            </p>
+          <p>
+            GTBT is a radio show broadcasting every Wednesday 2pm CET from <a href="https://www.pension-almonde.nl/">Pension Almonde</a>, Rotterdam.
+          </p>
+          <div class="links">
+          <p>
+            <a href="https://www.instagram.com/good_times_bad_times/" target="_blank">Instagram</a>
+          </p>
+          <p>
+            <a href="https://www.mixcloud.com/good_times_bad_times/" target="_blank">Mixcloud</a>
+          </p>
+          <p>
+            <a href="https://www.are.na/jack-bardwell/good-times-bad-times" target="_blank">Are.na</a>
+          </p>
+        </div>
+        </div>
+      </div>
+
+        <!-- JOURNAL SECTION -->
+        <div ng-app="arenaApp" class="section journal">
+
+
+            <div class="container" ng-controller="channelShow">
+
+              <div class="content">
+                <p class="mobile-header">
+                  JOURNAL
+                </p>
+
+                <!-- Channel contents loop -->
+                <div ng-repeat="block in channel.contents">
+
+                    <div class="block">
+                        <p ng-if="block.title">
+                            <span ng-if="block.class == 'Link'">
+                                <a href="{{block.source.url}}" target="_blank" class='block-link' title="{{block.title}}">{{block.title}}
+                                <p class="link-info" style="font-size: 16px;">{{block.source.provider.name}}</p></a>
+                            </span>
+                            <span ng-if="block.class == 'Attachment'">
+                                | <a href="{{block.source.url}}" target="_blank" title="{{block.title}}">Download</a>
+                            </span>
+                        </p>
+
+                        <div ng-if="block.class == 'Image'">
+                            <figure>
+                                <div class="block-image">
+                                    <img src="{{block.image.display.url}}" alt="{{block.title}}"">
+                                </div>
+                                <div class="image-caption">
+                                    <figcaption ng-bind-html-unsafe="block.content_html"> </figcaption>
+                                </div>
+                            </figure>
+                        </div>
+
+                        <div ng-if="block.class == 'Attachment'">
+                            <img src="{{block.image.display.url}}" alt="{{block.title}}" class="scale-with-grid add-bottom">
+                        </div>
+
+                        <div ng-if="block.class == 'Text'" ng-bind-html-unsafe="block.content_html">
+                        </div>
+
+                        <div ng-if="block.class == 'Media'">
+                            <div ng-bind-html-unsafe="block.embed.html"></div>
+                            <figcaption ng-bind-html-unsafe="block.content_html"></figure>
+                        </div>
+
+                        <div ng-if="block.class == 'Channel'">
+                            <p class="channel"><a href="#{{block.slug}}" target="_blank" title="">{{block.title}}</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- End Channel contents loop -->
+            </div>
+          </div>
+
+      </div>
+
+    <!-- Bouncy face -->
+      <div id="splash-container">
+        <canvas id="splash-canvas"></canvas>
+      </div>
     </div>
   </body>
+  <script type="text/javascript">
+      var app = angular.module('arenaApp', ['ngResource', 'ngSanitize']);
+
+      app.controller('channelShow', function($scope, $resource) {
+        var Channel = $resource('http://api.are.na/v2/channels/:slug');
+
+        var channel = Channel.get({slug: 'good-times-bad-times', direction: 'desc'}, function(){
+          $scope.channel = channel;
+        });
+      })
+ </script>
   <script src="canvas.js"></script>
 </html>
