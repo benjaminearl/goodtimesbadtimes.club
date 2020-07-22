@@ -85,7 +85,7 @@
             var app = angular.module('arenaApp', ['ngResource', 'ngSanitize']);
 
             app.controller('channelShow', function($scope, $resource) {
-              var Channel = $resource('http://api.are.na/v2/channels/:slug');
+              var Channel = $resource('https://api.are.na/v2/channels/:slug');
 
               var channel = Channel.get({slug: 'good-times-bad-times', direction: 'desc'}, function(){
                 $scope.channel = channel;
