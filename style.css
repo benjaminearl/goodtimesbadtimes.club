@@ -4,6 +4,10 @@ body {
   font-size: 19px;
 }
 
+a:visited {
+  color: white;
+}
+
 .marquee3k p {
   color: white;
   margin: 0;
