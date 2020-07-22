@@ -30,6 +30,10 @@ body {
   padding-right: 30px;
 }
 
+a {
+  color: white;
+}
+
 a:visited {
   color: white;
   cursor: alias;
