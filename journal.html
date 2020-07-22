@@ -3,7 +3,7 @@
     <head>
       <meta content='width=device-width, initial-scale=1' name='viewport'>
       <meta charset="utf-8">
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="style2.css">
       <title>Good Times Bad Times dot Club Journal</title>
       <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
       <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -24,18 +24,16 @@
             .channel{text-align:center; background:#e3e3e3; border:1px solid #ccc;}
         </style>
     </head>
-    <body ng-app="arenaApp">
+    <body ng-app="arenaApp" style="background-color: red; color: white;">
 
-        <div class="container" ng-controller="channelShow">
+        <div class="container" ng-controller="channelShow" style="width: 40vw; margin: auto;">
 
             <div class="row">
                 <div class="sixteen columns add-bottom">
                     <h1 class="header">{{channel.title}}</h1>
                 </div>
 
-                <div class="eight columns offset-by-four">
-                    <p ng-if="channel.metadata.description">{{channel.metadata.description}}</p>
-                </div>
+
             </div>
 
             <!-- Channel contents loop -->

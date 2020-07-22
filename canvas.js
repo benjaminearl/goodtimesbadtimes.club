@@ -32,7 +32,7 @@ let face = {
 
 function resizeCanvas () {
   canvas.width = window.innerWidth
-  canvas.height = window.innerHeight
+  canvas.height = window.innerHeight - 45
 }
 
 window.addEventListener('resize', resizeCanvas)
