@@ -130,6 +130,10 @@ td {
   grid-column: 2;
 }
 
+#schedule {
+  overflow: scroll;
+}
+
 #schedule, #chat {
   border-right: 1px solid white;
   grid-column: 1;
