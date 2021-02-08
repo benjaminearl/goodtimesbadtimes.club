@@ -107,6 +107,10 @@ table {
   color: red;
 }
 
+#archive td:hover .archive-link p {
+  color: red;
+}
+
 #schedule table {
   bottom: 20
 }
@@ -161,6 +165,17 @@ td {
 
 #archive {
   overflow: scroll;
+}
+
+.archive-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+
+.archive-link p {
+  margin: 0;
 }
 
 @media all and (max-width: 850px) {
