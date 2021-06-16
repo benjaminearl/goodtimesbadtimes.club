@@ -135,7 +135,7 @@ td {
 }
 
 #schedule {
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 #schedule, #chat {
