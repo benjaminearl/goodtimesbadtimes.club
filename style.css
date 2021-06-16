@@ -1,7 +1,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  font-size: 19px;
+  font-size: 18px;
 }
 
 .marquee3k p {
@@ -165,6 +165,15 @@ td {
 
 #archive {
   overflow: scroll;
+}
+
+.ext-button {
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.external-buttons {
+  padding-left: 0px;
 }
 
 .archive-link {
