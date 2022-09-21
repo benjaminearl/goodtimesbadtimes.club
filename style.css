@@ -18,7 +18,7 @@ body {
   height: 45px;
   position: fixed;
   top: 0px;
-  background-color: green;
+  background-color: red;
   border-bottom: 1px solid white;
 }
 
@@ -82,7 +82,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   color:white;
-  background-color: green;
+  background-color: red;
 }
 
 #schedule table, th, td {
@@ -94,21 +94,21 @@ table {
   text-decoration: none;
   padding: 5px 15px;
   border-radius: 25px;
-  background-color: green;
+  background-color: red;
 }
 
 .proposal:hover {
   background-color: white;
-  color: green;
+  color: red;
 }
 
 #archive td:hover {
   background-color: white;
-  color: green;
+  color: red;
 }
 
 #archive td:hover .archive-link p {
-  color: green;
+  color: red;
 }
 
 #schedule table {
@@ -116,7 +116,7 @@ table {
 }
 
 #schedule thead {
-  background-color: green;
+  background-color: red;
   color: white;
 }
 
@@ -189,7 +189,7 @@ td {
 
 @media all and (max-width: 850px) {
   body {
-    background-color: green;
+    background-color: red;
   }
 
   #sections {
@@ -212,14 +212,14 @@ td {
 
   #schedule {
     grid-row: 1;
-    background-color: green;
+    background-color: red;
     border-top: 1px solid white;
     border-right: 0px;
   }
 
   #about {
     grid-row: 2;
-    background-color: green;
+    background-color: red;
   }
 
   #chat {
@@ -228,7 +228,7 @@ td {
 
   #archive {
     grid-row: 3;
-    background-color: green;
+    background-color: red;
   }
 
   #about, #archive {
