@@ -5,50 +5,21 @@ body {
 }
 
 .marquee3k p {
-  color: black;
+  color: white;
   margin: 0;
 }
 
-img {
-  z-index: 999;
-  cursor: pointer;
-  width: 280px;
-  filter: drop-shadow(0 0 0.05rem black);
-  width: 350px;
-}
-
-#image-container {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top:0%;
-  left:0%; 
-  overflow: hidden;
-  z-index: 999;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-}
-
-#image-container img {
-  pointer-events: auto;
-  }
-
-
 #container {
-  position: relative;
   width: 100%;
-  height: 100%;
 }
-
 
 #header {
   width: 100vw;
   height: 45px;
   position: fixed;
   top: 0px;
-  background-color: beige;
-  border-bottom: 1px solid black;
+  background-color: red;
+  border-bottom: 1px solid white;
 }
 
 .marquee3k {
@@ -60,11 +31,11 @@ img {
 }
 
 a {
-  color: black;
+  color: white;
 }
 
 a:visited {
-  color: black;
+  color: white;
   cursor: alias;
 }
 
@@ -74,7 +45,7 @@ audio {
 
 .title {
   float: right;
-  color: black;
+  color: white;
 }
 
 .title p {
@@ -104,40 +75,40 @@ audio {
 }
 
 .top {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
 }
 
 table {
   border-collapse: collapse;
   width: 100%;
-  color:black;
-  background-color: beige;
+  color:white;
+  background-color: red;
 }
 
 #schedule table, th, td {
-  border: 1px solid black;
+  border: 1px solid white;
 }
 
 .proposal {
-  border: 1px solid black;
+  border: 1px solid white;
   text-decoration: none;
   padding: 5px 15px;
   border-radius: 25px;
-  background-color: beige;
+  background-color: red;
 }
 
 .proposal:hover {
-  background-color: black;
-  color: beige;
+  background-color: white;
+  color: red;
 }
 
 #archive td:hover {
-  background-color: black;
-  color: beige;
+  background-color: white;
+  color: red;
 }
 
 #archive td:hover .archive-link p {
-  color: beige;
+  color: red;
 }
 
 #schedule table {
@@ -145,8 +116,8 @@ table {
 }
 
 #schedule thead {
-  background-color: beige;
-  color: black;
+  background-color: red;
+  color: white;
 }
 
 th {
@@ -168,7 +139,7 @@ td {
 }
 
 #schedule, #chat {
-  border-right: 1px solid black;
+  border-right: 1px solid white;
   grid-column: 1;
 }
 
@@ -188,7 +159,7 @@ td {
 }
 
 #about p, ul {
-  color: black;
+  color: white;
   margin: 0px;
 }
 
@@ -218,7 +189,7 @@ td {
 
 @media all and (max-width: 850px) {
   body {
-    background-color: beige;
+    background-color: red;
   }
 
   #sections {
@@ -241,14 +212,14 @@ td {
 
   #schedule {
     grid-row: 1;
-    background-color: beige;
-    border-top: 1px solid black;
+    background-color: red;
+    border-top: 1px solid white;
     border-right: 0px;
   }
 
   #about {
     grid-row: 2;
-    background-color: beige;
+    background-color: red;
   }
 
   #chat {
@@ -257,12 +228,10 @@ td {
 
   #archive {
     grid-row: 3;
-    background-color: beige;
+    background-color: red;
   }
 
   #about, #archive {
     grid-column: 1;
   }
-
-
-
+}
