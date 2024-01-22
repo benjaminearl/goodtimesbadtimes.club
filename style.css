@@ -103,14 +103,14 @@ table {
   color: red;
 }
 
-#archive td:hover {
+/* #archive td:hover {
   background-color: white;
   color: red;
-}
+} */
 
-#archive td:hover .archive-link p {
+/* #archive td:hover .archive-link p {
   color: red;
-}
+} */
 
 #schedule table {
   bottom: 20
