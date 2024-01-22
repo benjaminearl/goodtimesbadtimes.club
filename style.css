@@ -72,6 +72,7 @@ audio {
   vertical-align: top;
   padding: 20px;
   position: relative;
+  overflow: scroll;
 }
 
 .top {
@@ -146,6 +147,7 @@ td {
 #schedule, #about {
   grid-row: 1;
 }
+
 
 #chat, #archive {
   grid-row: 2;
