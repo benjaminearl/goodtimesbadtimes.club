@@ -129,6 +129,7 @@ th {
 
 td {
   padding: 10px;
+  min-width:  6rem;
 }
 
 #about, #archive {
