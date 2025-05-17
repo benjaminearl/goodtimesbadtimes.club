@@ -5,7 +5,7 @@ body {
 }
 
 .marquee3k p {
-  color: white;
+  color: black;
   margin: 0;
 }
 
@@ -18,8 +18,8 @@ body {
   height: 45px;
   position: fixed;
   top: 0px;
-  background-color: red;
-  border-bottom: 1px solid white;
+  background-color: #ffef17;
+  border-bottom: 1px solid black;
 }
 
 .marquee3k {
@@ -31,11 +31,11 @@ body {
 }
 
 a {
-  color: white;
+  color: black;
 }
 
 a:visited {
-  color: white;
+  color: black;
   cursor: alias;
 }
 
@@ -45,7 +45,7 @@ audio {
 
 .title {
   float: right;
-  color: white;
+  color: black;
 }
 
 .title p {
@@ -76,31 +76,31 @@ audio {
 }
 
 .top {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid black;
 }
 
 table {
   border-collapse: collapse;
   width: 100%;
-  color:white;
-  background-color: red;
+  color:black;
+  background-color: #fff;
 }
 
 #schedule table, th, td {
-  border: 1px solid white;
+  border: 1px solid black;
 }
 
 .proposal {
-  border: 1px solid white;
+  border: 1px solid black;
   text-decoration: none;
   padding: 5px 15px;
   border-radius: 25px;
-  background-color: red;
+  background-color: #fff;
 }
 
 .proposal:hover {
-  background-color: white;
-  color: red;
+  background-color: black;
+  color: #fff;
 }
 
 /* #archive td:hover {
@@ -117,8 +117,8 @@ table {
 }
 
 #schedule thead {
-  background-color: red;
-  color: white;
+  background-color: #ffef17;
+  color: black;
 }
 
 th {
@@ -141,7 +141,7 @@ td {
 }
 
 #schedule, #chat {
-  border-right: 1px solid white;
+  border-right: 1px solid black;
   grid-column: 1;
 }
 
@@ -162,7 +162,7 @@ td {
 }
 
 #about p, ul {
-  color: white;
+  color: black;
   margin: 0px;
 }
 
@@ -192,7 +192,7 @@ td {
 
 @media all and (max-width: 850px) {
   body {
-    background-color: red;
+    background-color: #ffef17;
   }
 
   #sections {
@@ -215,14 +215,14 @@ td {
 
   #schedule {
     grid-row: 1;
-    background-color: red;
-    border-top: 1px solid white;
+    background-color: #ffef17;
+    border-top: 1px solid black;
     border-right: 0px;
   }
 
   #about {
     grid-row: 2;
-    background-color: red;
+    background-color: #ffef17;
   }
 
   #chat {
@@ -231,7 +231,7 @@ td {
 
   #archive {
     grid-row: 3;
-    background-color: red;
+    background-color: #ffef17;
   }
 
   #about, #archive {
