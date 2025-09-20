@@ -44,10 +44,10 @@ resizeCanvas()
 function update() {
     setTimeout(() => {
         //Draw the canvas background
-        ctx.fillStyle ='red';
+        ctx.fillStyle ='#0011CD';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         //Draw face Logo and his background
-        ctx.fillStyle = 'red';
+        ctx.fillStyle = '#0011CD';
         ctx.fillRect(face.x, face.y, face.width*scale, face.height*scale);
         ctx.drawImage(face.img, face.x, face.y, face.width*scale, face.height*scale);
         //Move the logo

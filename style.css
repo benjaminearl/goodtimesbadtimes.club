@@ -18,7 +18,7 @@ body {
   height: 45px;
   position: fixed;
   top: 0px;
-  background-color: red;
+  background-color: #0011CD;
   border-bottom: 1px solid #fff;
 }
 
@@ -83,7 +83,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   color:#fff;
-  background-color: red;
+  background-color: #0011CD;
 }
 
 #schedule table, th, td {
@@ -95,21 +95,21 @@ table {
   text-decoration: none;
   padding: 5px 15px;
   border-radius: 25px;
-  background-color: red;
+  background-color: #0011CD;
 }
 
 .proposal:hover {
   background-color: #fff;
-  color: red;
+  color: #0011CD;
 }
 
 /* #archive td:hover {
   background-color: white;
-  color: red;
+  color: #0011CD;
 } */
 
 /* #archive td:hover .archive-link p {
-  color: red;
+  color: #0011CD;
 } */
 
 #schedule table {
@@ -117,7 +117,7 @@ table {
 }
 
 #schedule thead {
-  background-color: red;
+  background-color: #0011CD;
   color: #fff;
 }
 
@@ -192,7 +192,7 @@ td {
 
 @media all and (max-width: 850px) {
   body {
-    background-color: red;
+    background-color: #0011CD;
   }
 
   #sections {
@@ -215,14 +215,14 @@ td {
 
   #schedule {
     grid-row: 1;
-    background-color: red;
+    background-color: #0011CD;
     border-top: 1px solid #fff;
     border-right: 0px;
   }
 
   #about {
     grid-row: 2;
-    background-color: red;
+    background-color: #0011CD;
   }
 
   #chat {
@@ -231,7 +231,7 @@ td {
 
   #archive {
     grid-row: 3;
-    background-color: red;
+    background-color: #0011CD;
   }
 
   #about, #archive {
