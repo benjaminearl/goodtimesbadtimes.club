@@ -1,3 +1,10 @@
+:root {
+  --color-main: #FFFFFF;
+  --color-background: #FF0000;
+
+  --border: 1px solid var(--color-main);
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -5,7 +12,7 @@ body {
 }
 
 .marquee3k p {
-  color: #fff;
+  color: var(--color-main);
   margin: 0;
 }
 
@@ -18,8 +25,8 @@ body {
   height: 45px;
   position: fixed;
   top: 0px;
-  background-color: #FF0000;
-  border-bottom: 1px solid #fff;
+  background-color: var(--color-background);
+  border-bottom: var(--border);
 }
 
 .marquee3k {
@@ -31,11 +38,11 @@ body {
 }
 
 a {
-  color: #fff;
+  color: var(--color-main);
 }
 
 a:visited {
-  color: #fff;
+  color: var(--color-main);
   cursor: alias;
 }
 
@@ -45,7 +52,7 @@ audio {
 
 .title {
   float: right;
-  color: #fff;
+  color: var(--color-main);
 }
 
 .title p {
@@ -76,31 +83,18 @@ audio {
 }
 
 .top {
-  border-bottom: 1px solid #fff;
+  border-bottom: var(--border);
 }
 
 table {
   border-collapse: collapse;
   width: 100%;
-  color:#fff;
-  background-color: #FF0000;
+  color: var(--color-main);
+  background-color: var(--color-background);
 }
 
 #schedule table, th, td {
-  border: 1px solid #fff;
-}
-
-.proposal {
-  border: 1px solid #fff;
-  text-decoration: none;
-  padding: 5px 15px;
-  border-radius: 25px;
-  background-color: #FF0000;
-}
-
-.proposal:hover {
-  background-color: #fff;
-  color: #0011CD;
+  border: var(--border)
 }
 
 /* #archive td:hover {
@@ -117,8 +111,8 @@ table {
 }
 
 #schedule thead {
-  background-color: #FF0000;
-  color: #fff;
+  background-color: var(--color-background);
+  color: var(--color-main);
 }
 
 th {
@@ -141,7 +135,7 @@ td {
 }
 
 #schedule, #chat {
-  border-right: 1px solid #fff;
+  border-right: var(--border);
   grid-column: 1;
 }
 
@@ -162,7 +156,7 @@ td {
 }
 
 #about p, ul {
-  color: #fff;
+  color: var(--color-main);
   margin: 0px;
 }
 
@@ -170,13 +164,28 @@ td {
   overflow: scroll;
 }
 
-.ext-button {
-  margin-bottom: 20px;
+.ul-reset {
+  padding-left: 0px;
+}
+.ul-reset li {
   list-style: none;
 }
 
-.external-buttons {
-  padding-left: 0px;
+.buttons li {
+  margin: 20px 0;
+}
+
+.button {
+  border: var(--border);
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 25px;
+  background-color: var(--color-background);
+}
+
+.button:hover {
+  background-color: var(--color-main);
+  color: var(--color-background);
 }
 
 .archive-link {
@@ -192,7 +201,7 @@ td {
 
 @media all and (max-width: 850px) {
   body {
-    background-color: #FF0000;
+    background-color: var(--color-background);
   }
 
   #sections {
@@ -215,14 +224,14 @@ td {
 
   #schedule {
     grid-row: 1;
-    background-color: #FF0000;
-    border-top: 1px solid #fff;
+    background-color: var(--color-background);
+    border-top: var(--border);
     border-right: 0px;
   }
 
   #about {
     grid-row: 2;
-    background-color: #0011CD;
+    background-color: var(--color-background);
   }
 
   #chat {
@@ -231,7 +240,7 @@ td {
 
   #archive {
     grid-row: 3;
-    background-color: #FF0000;
+    background-color: var(--color-background);
   }
 
   #about, #archive {
